@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <h1>Registration form</h1>
+            <form >
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Username</label>
+                    <input [(ngModel)]="usernameR" name="ab"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputPassword1" class="form-label">Password</label>
+                    <input [(ngModel)]="passwordR" name="a" type="password"  class="form-control" id="exampleInputPassword1">
+                </div>
+                <button (click)="register()" type="submit" class="btn btn-primary">Register</button>
+                <p class="login">already a member? <a routerLink=""> Login here</a></p>
+            </form>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
