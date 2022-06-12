@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { DataService } from '../data.service';
 
 @Component({
@@ -8,17 +9,23 @@ import { DataService } from '../data.service';
 })
 export class RegisterComponent implements OnInit {
 
-  usernameR:any
-  passwordR:any
+
+  registerForm = this.fb.group({
+    username:["",[Validators.required,Validators.pattern("[a-zA-Z0-9_]*")]],
+    password:["",[Validators.required,Validators.pattern("[a-zA-Z0-9_]*")]]
+  })
 
 
-  constructor(private dataprovider:DataService) { }
+  constructor(private dataprovider:DataService,private fb:FormBuilder) { }
 
   ngOnInit(): void {
   }
 
   register() {
-
-    this.dataprovider.verifyRegister(this.usernameR, this.passwordR)
+    if(this.registerForm.valid) {
+      this.dataprovider.verifyRegister(this.registerForm.value.username, this.registerForm.value.password)
+    } else {
+      alert("invalid form")
+    }
   }
 }

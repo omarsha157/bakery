@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { DataService } from '../data.service';
 
@@ -9,10 +10,16 @@ import { DataService } from '../data.service';
 })
 export class LoginComponent implements OnInit {
 
-  password:any
-  username:any
+  // password:any
+  // username:any
+
+  loginForm = this.fb.group({
+    username:["",[Validators.required,Validators.pattern("[a-zA-Z0-9_]*")]],
+    password:["",[Validators.required,Validators.pattern("[a-zA-Z0-9_]*")]]
+  })
+
   
-  constructor(private dataprovider:DataService, private naviagtor:Router) { 
+  constructor(private dataprovider:DataService, private naviagtor:Router, private fb:FormBuilder) { 
   }
 
   ngOnInit(): void {
@@ -20,14 +27,15 @@ export class LoginComponent implements OnInit {
   
 
   login() {
-    let uname = this.username
-    let pswd = this.password
+    let uname = this.loginForm.value.username
+    let pswd = this.loginForm.value.password
 
-    this.dataprovider.verifyLogin(uname, pswd)
-  }
+    if(this.loginForm.valid) {
 
-  showDb() {
-    console.log(this.dataprovider.database)
+      this.dataprovider.verifyLogin(uname, pswd)
+    } else {
+      alert("invalid form")
+    }
   }
 
 }

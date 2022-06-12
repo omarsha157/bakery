@@ -39,3 +39,28 @@ button {
     font-weight: bold;
     display: inline-block;
 }
+
+@media only screen and (max-width: 600px) {
+    .base {
+    background-image: unset;
+
+    background-color: #d57c46;
+    }
+
+    .register-form {
+        padding-right: unset;
+    }
+
+    button {
+        background-color: white;
+        color: #d57c46;
+    }
+}
+
+.custom-warning {
+    display: inline;
+    color: red;
+    background-color: white;
+    padding: 0.2em 0.5em;
+    border-radius: 0.4em;
+}
