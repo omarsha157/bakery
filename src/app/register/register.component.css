@@ -1,4 +1,41 @@
+.navbar-brand {
+    font-family: 'Oleo Script', cursive;
+}
+
+.base {
+    background-image: url(../../assets/login-bg.jpg);
+    height: 92vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
 .login {
     display: inline;
-    padding-left: 10%;
+}
+
+.register-form {
+    padding-top: 8em;
+    padding-right: 3em;
+}
+
+.register-form a {
+    color: white;
+    font-weight: bold;
+    padding: 0.2em 0.4em;
+    border-radius: 0.5em;
+    display: inline-block;
+}
+
+.register-form a:hover {
+    background-color: white;
+    color: #d57c46;
+}
+
+button {
+    background-color: #d57c46;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
 }

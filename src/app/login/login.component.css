@@ -1,6 +1,10 @@
+.navbar-brand {
+    font-family: 'Oleo Script', cursive;
+}
+
 .base {
     background-image: url(../../assets/login-bg.jpg);
-    height: 100vh;
+    height: 92vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -13,12 +17,16 @@
 }
 
 .login-form a {
-    color: #d57c46;
+    color: white;
     font-weight: bold;
-    background-color: white;
     padding: 0.2em 0.4em;
     border-radius: 0.5em;
     display: inline-block;
+}
+
+.login-form a:hover {
+    background-color: white;
+    color: #d57c46;
 }
 
 button {
@@ -26,6 +34,5 @@ button {
     color: white;
     font-weight: bold;
     display: inline-block;
-    /* margin-top: -0.4em; */
 }
 
