@@ -1,4 +1,31 @@
-.register {
-    display: inline;
-    padding-left: 10%;
+.base {
+    background-image: url(../../assets/login-bg.jpg);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
 }
+
+.login-form {
+    padding-top: 8em;
+    padding-right: 3em;
+}
+
+.login-form a {
+    color: #d57c46;
+    font-weight: bold;
+    background-color: white;
+    padding: 0.2em 0.4em;
+    border-radius: 0.5em;
+    display: inline-block;
+}
+
+button {
+    background-color: #d57c46;
+    color: white;
+    font-weight: bold;
+    display: inline-block;
+    /* margin-top: -0.4em; */
+}
+

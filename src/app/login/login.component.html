@@ -1,23 +1,26 @@
-<div class="container">
-    <div class="row mt-5">
-        <div class="col-4"></div>
-        <div class="col-4">
-            <h1>Login here</h1>
-            <form>
-                <div class="mb-3">
-                    <label for="exampleInputEmail1" class="form-label">Username</label>
-                    <input [(ngModel)]="username" name="ab"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1" class="form-label">Password</label>
-                    <input [(ngModel)]="password" name="a" type="password"  class="form-control" id="exampleInputPassword1">
-                </div>
-                <button (click)="login()" type="submit" class="btn btn-primary">Login</button>
-                <p class="register">Not a member? <a routerLink="register"> Register here</a></p>
-            </form>
+<div class="base">
+    <div class="container">
+        <div class="row justify-content-end login-form">
+            <div class="col-4">
+                <h3>Login here</h3>
+                <form>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Username</label>
+                        <input [(ngModel)]="username" name="ab"  type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Password</label>
+                        <input [(ngModel)]="password" name="a" type="password"  class="form-control" id="exampleInputPassword1">
+                    </div>
+                    <div class="py-1 d-flex justify-content-between align-items-baseline">
+                        <p>Not a member? <a routerLink="register"> Register here</a></p>
+                        <button (click)="login()" type="submit" class="btn">Login</button>
+                    </div>
+                </form>
+            </div>
         </div>
-        <div class="col-4"></div>
     </div>
-</div>
+    
+    <button (click)="showDb()">show db</button>
 
-<button (click)="showDb()">show db</button>
+</div>
